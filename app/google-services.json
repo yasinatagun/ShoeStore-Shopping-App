@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "871646881418",
+    "project_id": "shoestore-e31f8",
+    "storage_bucket": "shoestore-e31f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871646881418:android:533cec3b7907d77818af73",
+        "android_client_info": {
+          "package_name": "com.yasinatagun.shoestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871646881418-avn365dt0d9i35a01kl250j66i4a0tc5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2HbqdzxMbuM9XPi7N-VFWMtvbVM7uSxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871646881418-avn365dt0d9i35a01kl250j66i4a0tc5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

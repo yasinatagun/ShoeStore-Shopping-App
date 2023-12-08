@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.ListFragment"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_shoeFragment"
+            app:destination="@id/shoeFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.ShoeFragment"
+        tools:layout="@layout/fragment_shoe" >
+        <action
+            android:id="@+id/action_shoeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="Shoe"
+            app:argType="com.yasinatagun.shoestore.model.Shoe" />
+        <action
+            android:id="@+id/action_shoeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_shoeFragment_to_infotakingFragment"
+            app:destination="@id/infotakingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.CartFragment"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_infotakingFragment"
+            app:destination="@id/infotakingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.PaymentFragment"
+        tools:layout="@layout/fragment_payment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="zip"
+            app:argType="string" />
+        <argument
+            android:name="adress"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_paymentFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_paymentFragment_to_finishShoppingFragment"
+            app:destination="@id/finishShoppingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infotakingFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.InfotakingFragment"
+        tools:layout="@layout/fragment_infotaking" >
+        <action
+            android:id="@+id/action_infotakingFragment_to_paymentChoice"
+            app:destination="@id/paymentChoice" />
+        <action
+            android:id="@+id/action_infotakingFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentChoice"
+        android:name="com.yasinatagun.shoestore.view.fragment.PaymentChoiceFragment"
+        tools:layout="@layout/fragment_payment_choice" >
+        <action
+            android:id="@+id/action_paymentChoice_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="zip"
+            app:argType="string" />
+        <argument
+            android:name="adress"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_paymentChoice_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishShoppingFragment"
+        android:name="com.yasinatagun.shoestore.view.fragment.FinishShoppingFragment"
+        tools:layout="@layout/fragment_finish_shopping" >
+        <argument
+            android:name="cardName"
+            app:argType="string" />
+        <argument
+            android:name="cardNumber"
+            app:argType="string" />
+        <argument
+            android:name="zip"
+            app:argType="string" />
+        <argument
+            android:name="adress"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_finishShoppingFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>

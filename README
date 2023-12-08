@@ -1,0 +1,43 @@
+Shoe Store Projesi
+
+
+Uygulamamda eklediğim özellikler:
+
+-- Login Activity ve Forgot Activity
+1: Login, Register ve Şifremi Unuttum özellikleri Firebase Auth üzerinden yapılıyor.
+2: Login Activity kısmında 2 farklı fragment ile bu görev görülüyor.
+
+-- Main Activity - Alışveriş Fragmentları
+1: Shared Preferences ve Firestore Db kullanıldı
+2: Ürünler ve ürün fotoğrafları firestore ve firebase cloud üzerine yüklendi
+3: List fragment ve cart fragmentta yer alan recyclerviewler aracılığı ile veriler database üzerinden çekiliyor.
+4: Hem sepet, hemde ana ürün ekranında sepete ekleme  yapılabiliyor.
+5: Sepet içerisinde DB'yi de etkileyecek şekilde ürün çıkarımı yapılabiliyor.
+6: Sepet kısmında toplam ürün ve fiyat canlı olarak değişiyor.
+7: Üst menüde canlı bir şekilde sepet iconunun sayısı değişiyor. (StackOverFlow ve Diğer Kaynaklardan Alındı)
+8: Üst menüden uygulamadan çıkış yapılabiliyor, veriler DB üzerine kayıtlı olduğu için tekrar girişte sepet duruyor.
+9: Ekranlarımın her birinde anasayfaya doğru oluşan bir GERİ butonu oluşturdum. 
+        Bu sayede kullanıcı bir önceki fragmenta dönüş yapabiliyor.(StackOverFlow ve Diğer Kaynaklardan Alındı)
+10: Uygulamamdaki resim dosyalarını clouddan PICASSO yardımıyla çektim.
+
+-- Main Activity - Ödeme Sayfaları
+1: Ödeme sayfalarında öncelikle isim, şehir, adres gibi bilgiler alınıyor.
+        Bu bilgiler alınırken verilen bilginin türüne göre ekrandaki klavye değişiyor.
+2: Bu alınan bilgiler, tüm fragment geçişlerinde bir sonraki zorunlu sayfaya aktarılıyor.
+3: Genel bilgi alımından sonra Kredi Kartı seçeneğine tıklanırsa (NFC yapılmadı), bizi kredi kartı bilgi alma sayfasına aktarıyor.
+4: Burada kredi kartı numarasının 16, cvv'nin 3 rakam olacağı şekilde konroller gerçekleştiriliyor.
+5: Eğer kredi kartı bilgileri doğruysa (burada sadece rakam kontrolü yapıldı)
+        (pos veya başka bir yere bağlanılmadığı için ileri devam etmeyi seçtim) ödemenin 
+        tamamlandığını bildiren bir ekran karşımıza çıkıyor.
+Burada tarih, kart bilgileri, adres bilgilerini diğer Fragmentlerdan taşıyarak gösteriyorum.
+6: Ödeme başarılı bir şekilde yapıldıysa, sepetimiz db ve ui üzerinde sıfırlanıyor. Bu şekilde kullanıcı yeniden alışveriş yapmaya devam edeibiliyor.
+
+-- Notlar
+1: Uygulamamda Kredi Kartı, Gender gibi çeşitli modeller oluşturdum. 
+    Daha sonrasında genişletilmiş bir proje yapılırsa bu classların bu uygulamada yer alması gerektiğini düşündüm. 
+    Fakat şuanki versiyonda bir işe yaramadıkları için aktif şekilde kullanmadım.
+    
+ 2: Uygulamamın kodlarını yazarken db'den veri çekme, GRID LAYOUT ve RecyclerView bir arada kullanımı, 
+    canlı şekilde değişen sepet iconunun tasarımı gibi bazı özellikleri 
+    çeşitli sitelerdeki guidelar, soru cevaplar ve blog yazılarından kaynak olarak aldım.
+    
