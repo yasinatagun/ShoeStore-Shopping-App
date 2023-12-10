@@ -1,9 +1,14 @@
 # ShoeStore Shopping App
  Shopping card application with rich features
+ 
  Used authentication with Firebase Auth
+ 
  Used Firebase Firestore for database
+ 
  Used different kind of android components and unique design components
+ 
  Used Glide for images
+ 
  The application has bookmarking, login, register, buying, proceed transaction features.
  
 ![Screenshot_1702042667](https://github.com/yasinatagun/ShoeStore-Shopping-App/assets/4943407/79d6923a-f3dc-45fc-848f-9e1b30c3a306)
